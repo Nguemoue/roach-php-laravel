@@ -18,11 +18,12 @@ Check out the [full documentation](https://roach-php.dev/docs/laravel) to get up
 
 Want to see Roach PHP in action? Check out the [examples directory](./examples) which contains practical examples including:
 
-- **Job Scraper Spider** - A complete example of scraping job listings from a website (e.g., jobs.doopinet.com)
+- **[Quick Start Guide](./examples/QUICKSTART.md)** - Get started in minutes with a complete example for jobs.doopinet.com
+- **Job Scraper Spider** - A complete example of scraping job listings from a website
 - **Database Integration** - How to save scraped data to your Laravel database
 - **Controller Integration** - Using spiders in your Laravel controllers
 - **Artisan Commands** - Creating custom commands to run your spiders
-- **Detailed README** - Step-by-step guides in both [French](./examples/README.md) and [English](./examples/README_EN.md)
+- **Detailed Guides** - Step-by-step tutorials in both [French](./examples/README.md) and [English](./examples/README_EN.md)
 
 ### Quick Example
 
