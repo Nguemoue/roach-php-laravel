@@ -37,14 +37,6 @@ class DatabaseItemProcessor implements ItemProcessorInterface
     /**
      * Configure le processeur
      */
-    private function defaultOptions(): array
-    {
-        return [
-            'table' => 'scraped_items',
-            'unique_fields' => ['url'],
-        ];
-    }
-
     public function configure(array $options): void
     {
         $this->table = $options['table'] ?? $this->table;
