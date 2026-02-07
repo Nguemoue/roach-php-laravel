@@ -17,6 +17,7 @@ Check out the [full documentation](https://roach-php.dev/docs/laravel) to get up
 ### 📚 Documentation en Français
 
 Un guide complet en français est disponible pour vous aider à démarrer :
+- **[🚀 Démarrage rapide (QUICKSTART_FR.md)](QUICKSTART_FR.md)** - Commencez en 5 minutes
 - **[Guide complet en français (GUIDE_FR.md)](GUIDE_FR.md)** - Guide détaillé avec explications et exemples
 - **[Exemples pratiques (examples/)](examples/)** - Code d'exemple prêt à utiliser
 
