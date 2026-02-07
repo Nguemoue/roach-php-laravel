@@ -14,6 +14,33 @@ composer require roach-php/laravel
 
 Check out the [full documentation](https://roach-php.dev/docs/laravel) to get up and running.
 
+## Examples
+
+Want to see Roach PHP in action? Check out the [examples directory](./examples) which contains practical examples including:
+
+- **[Quick Start Guide](./examples/QUICKSTART.md)** - Get started in minutes with a complete example for jobs.doopinet.com
+- **Job Scraper Spider** - A complete example of scraping job listings from a website
+- **Database Integration** - How to save scraped data to your Laravel database
+- **Controller Integration** - Using spiders in your Laravel controllers
+- **Artisan Commands** - Creating custom commands to run your spiders
+- **Detailed Guides** - Step-by-step tutorials in both [French](./examples/README.md) and [English](./examples/README_EN.md)
+
+### Quick Example
+
+```php
+// Create a spider
+php artisan roach:spider JobScraper
+
+// Run the spider
+php artisan roach:run JobScraper
+
+// Or use it programmatically
+use RoachPHP\Roach;
+$items = Roach::collectSpider(JobScraper::class);
+```
+
+See the [examples directory](./examples) for complete, working examples.
+
 ## Credits
 
 - [Kai Sassnowski](https://github.com/ksassnowski)
