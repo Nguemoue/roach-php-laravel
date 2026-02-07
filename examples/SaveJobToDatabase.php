@@ -48,7 +48,6 @@ class SaveJobToDatabase implements ItemProcessorInterface
                     'salary' => $data['salary'] ?? null,
                     'job_type' => $data['job_type'] ?? null,
                     'posted_date' => $data['posted_date'] ?? null,
-                    'url' => $data['url'] ?? null,
                     'scraped_at' => now(),
                     'updated_at' => now(),
                 ]

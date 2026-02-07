@@ -83,10 +83,17 @@ class ScrapeJobsCommand extends Command
                 foreach ($items as $item) {
                     \DB::table('jobs')->updateOrInsert(
                         ['url' => $item['url']],
-                        array_merge($item, [
+                        [
+                            'title' => $item['title'] ?? null,
+                            'company' => $item['company'] ?? null,
+                            'location' => $item['location'] ?? null,
+                            'description' => $item['description'] ?? null,
+                            'salary' => $item['salary'] ?? null,
+                            'job_type' => $item['job_type'] ?? null,
+                            'posted_date' => $item['posted_date'] ?? null,
                             'scraped_at' => now(),
                             'updated_at' => now(),
-                        ])
+                        ]
                     );
                 }
                 $this->info('Results saved successfully!');

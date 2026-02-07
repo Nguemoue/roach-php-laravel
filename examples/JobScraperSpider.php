@@ -142,7 +142,20 @@ class JobScraperSpider extends BasicSpider
             
             // Make sure we have an absolute URL
             if ($nextUrl && !str_starts_with($nextUrl, 'http')) {
-                $nextUrl = rtrim($response->getUri(), '/') . '/' . ltrim($nextUrl, '/');
+                // Parse the base URL properly to handle paths
+                $baseUrl = parse_url($response->getUri());
+                $scheme = $baseUrl['scheme'] ?? 'https';
+                $host = $baseUrl['host'] ?? '';
+                
+                // If nextUrl starts with /, it's absolute path
+                if (str_starts_with($nextUrl, '/')) {
+                    $nextUrl = $scheme . '://' . $host . $nextUrl;
+                } else {
+                    // Relative URL - append to the directory of current URL
+                    $path = $baseUrl['path'] ?? '/';
+                    $directory = dirname($path);
+                    $nextUrl = $scheme . '://' . $host . $directory . '/' . $nextUrl;
+                }
             }
 
             if ($nextUrl) {
